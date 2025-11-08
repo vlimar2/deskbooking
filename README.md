@@ -1,33 +1,36 @@
-1- Funcionalidade: Registro de Usuário
+1- Functionality: User Registration
 User Story:
-Como um novo usuário,
-Eu quero me registrar na aplicação,
-Para que eu possa fazer login e fazer reservas de mesa.
+As a new user,
+I want to register on the application,
+So that I can log in and make table reservations.
 
-Regras de negócio:
-* O e-mail do usuário deve ser único no sistema.
-* O campo de senha deve ter, no mínimo, 8 caracteres, incluindo letra maiúscula, minúscula, número e símbolo.
-* Todos os campos obrigatórios (nome, e-mail, senha) devem ser preenchidos.
-* O sistema deve validar o formato do e-mail antes do cadastro.
+Business Rules:
 
-2- Funcionalidade: Login de Usuário
+* The user's email must be unique in the system.
+* The password field must have at least 8 characters, including uppercase letters, lowercase letters, numbers, and symbols.
+* All required fields (name, email, password) must be filled in.
+* The system must validate the email format before registration.
+
+2- Functionality: User Login
 User Story:
-Como um usuário registrado,
-Eu quero fazer login na aplicação,
-Para que eu possa acessar minha conta e fazer minhas reservas.
+As a registered user,
+I want to log in to the application,
+So that I can access my account and make my reservations.
 
-Regras de negócio:
-* O login só é permitido com e-mail e senha válidos.
-* O usuário deve permanecer autenticado por um período configurável (ex: 30 minutos de inatividade).
+Business Rules:
 
-3- Funcionalidade: Reserva de Mesa
+* Login is only allowed with a valid email and password.
+* The user must remain authenticated for a configurable period (e.g., 30 minutes of inactivity).
+
+3- Functionality: desk booking
 User Story:
-Como um usuário autenticado,
-Eu quero reservar uma mesa,
-Para que eu garanta meu lugar em um dia e horário específicos.
+As an authenticated user,
+I want to book a desk,
+So that I guarantee my place on a specific day and time.
 
-Regras de negócio:
-* Não pode haver duplicidade de reserva para a mesma mesa e horário.
-* O sistema deve validar a disponibilidade da mesa antes de confirmar a reserva.
-* Cada usuário pode ter no máximo uma reserva ativa por data.
-* A reserva deve conter data, hora e mesa selecionada.
+Business Rules:
+
+* There cannot be duplicate bookings for the same desk and time.
+* The system must validate table availability before confirming the booking.
+* Each user can have a maximum of one active booking per date.
+* The reservation must include the date, time, and selected desk.
