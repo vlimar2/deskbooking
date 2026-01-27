@@ -1,0 +1,5 @@
+# Test-Related Files
+test-results/
+node_modules/
+.env
+*.log

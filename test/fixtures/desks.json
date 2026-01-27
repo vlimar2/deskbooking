@@ -1,0 +1,9 @@
+{
+  "validDesk": {
+    "deskId": 1
+  },
+  "invalidDesk": {
+    "deskId": 999
+  },
+  "missingFields": {}
+}

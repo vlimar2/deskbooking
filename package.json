@@ -1,0 +1,25 @@
+{
+  "name": "deskbooking",
+  "version": "1.0.0",
+  "description": "API REST para reserva de mesas",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "mocha test/**/*.test.js --timeout 10000",
+    "test:report": "mocha test/**/*.test.js --timeout 10000 --reporter mochawesome --reporter-options reportDir=test-results,reportFilename=test-report"
+  },
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "swagger-ui-express": "^5.0.1",
+    "yamljs": "^0.3.0"
+  },
+  "devDependencies": {
+    "chai": "^4.5.0",
+    "dotenv": "^16.6.1",
+    "mocha": "^10.8.2",
+    "mochawesome": "^7.1.4",
+    "supertest": "^6.3.4"
+  }
+}

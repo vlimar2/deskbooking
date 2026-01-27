@@ -22,15 +22,30 @@ Business Rules:
 * Login is only allowed with a valid email and password.
 * The user must remain authenticated for a configurable period (e.g., 30 minutes of inactivity).
 
-3- Functionality: desk booking
+3-Functionality: List Available desks
+
 User Story:
+
 As an authenticated user,
-I want to book a desk,
-So that I guarantee my place on a specific day and time.
+I want to view the available tables,
+So that I can choose a free table at a specific time and date.
+
+Business Rules:
+
+The system should only display free desks for the selected day and time.
+The system should update table availability in real time (to avoid reservation conflicts).
+Desks that are already booked should not appear as available.
+If there are no tables available, the system should display a clear message to the user.
+
+4- Functionality: desk booking
+User Story:
+* As an authenticated user,
+* I want to book a desk,
+* So that I guarantee my place on a specific day and time.
 
 Business Rules:
 
 * There cannot be duplicate bookings for the same desk and time.
-* The system must validate table availability before confirming the booking.
+* The system must validate desk availability before confirming the booking.
 * Each user can have a maximum of one active booking per date.
 * The reservation must include the date, time, and selected desk.

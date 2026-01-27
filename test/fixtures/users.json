@@ -1,0 +1,17 @@
+{
+  "validUser": {
+    "username": "testuser1",
+    "password": "Test@123"
+  },
+  "invalidUser": {
+    "username": "invalid",
+    "password": "wrong"
+  },
+  "weakPassword": {
+    "username": "testuser2",
+    "password": "123"
+  },
+  "missingFields": {
+    "username": "testuser3"
+  }
+}
