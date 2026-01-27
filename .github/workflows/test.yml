@@ -1,0 +1,55 @@
+name: API Tests
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Start API server
+        run: npm start &
+        
+      - name: Wait for API to be ready
+        run: |
+          for i in {1..30}; do
+            if curl -s http://localhost:3000 > /dev/null; then
+              echo "API is ready"
+              exit 0
+            fi
+            echo "Waiting for API... attempt $i/30"
+            sleep 1
+          done
+          echo "API failed to start"
+          exit 1
+
+      - name: Run tests
+        run: npm test
+
+      - name: Generate test report
+        if: always()
+        run: npm run test:report
+
+      - name: Upload test results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-results
+          path: test-results/
