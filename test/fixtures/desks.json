@@ -5,5 +5,8 @@
   "invalidDesk": {
     "deskId": 999
   },
+   "emptyDesk": {
+    "deskId": ""
+  },
   "missingFields": {}
 }

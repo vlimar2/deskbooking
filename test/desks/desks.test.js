@@ -127,5 +127,14 @@ describe('Desk Management Tests', () => {
       expect(res.status).to.equal(403);
       expect(res.body).to.have.property('error');
     });
+    it('should fail when booking with empty desk id', async () => {
+      const res = await request(app)
+        .post('/api/reserve')
+        .set('Authorization', `Bearer ${authToken}`)
+        .send(desks.emptyDesk);
+      
+      expect(res.status).to.equal(400);
+      expect(res.body).to.have.property('error');
+    });
   });
 });
