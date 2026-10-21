@@ -6,7 +6,7 @@ const { users: usersDB } = require('../../src/model/db');
 require('dotenv').config();
 
 describe('User Registration Tests', () => {
-  it.only('should handle all user registration scenarios', async () => {
+  it('should handle all user registration scenarios', async () => {
     const scenarios = [
       { id: 1, username: 'valid', password: 'valid', shouldCreate: true },
       { id: 2, username: 'valid', password: 'invalid', shouldCreate: false },
